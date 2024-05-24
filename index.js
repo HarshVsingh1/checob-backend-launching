@@ -18,9 +18,9 @@ const saveEmailSchema =  mongoose.Schema({
  mongoose.connect('mongodb+srv://harsh:Geetasingh%40098@cluster0.wifoeru.mongodb.net/?retryWrites=true&w=majority', { dbName: "checob" });
 
  app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.send('backend is up')
   })
-  
+
  app.post('/saveemail' ,async(req,res) => {
      
     const email =  req.body.email 
