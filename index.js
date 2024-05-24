@@ -17,7 +17,10 @@ const saveEmailSchema =  mongoose.Schema({
 
  mongoose.connect('mongodb+srv://harsh:Geetasingh%40098@cluster0.wifoeru.mongodb.net/?retryWrites=true&w=majority', { dbName: "checob" });
 
-
+ app.get('/', (req, res) => {
+    res.send('Hello World')
+  })
+  
  app.post('/saveemail' ,async(req,res) => {
      
     const email =  req.body.email 
@@ -30,7 +33,7 @@ const saveEmailSchema =  mongoose.Schema({
 
     res.status(200).json({message : "saved email successfully"})
  })
-
+ 
  const PORT = process.env.PORT || 3000;
  app.listen(PORT, () => {
    console.log(`Server is running on port ${PORT}`);
